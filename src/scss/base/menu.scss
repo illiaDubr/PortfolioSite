@@ -54,6 +54,7 @@
 		position: relative;
 		width: toRem(30);
 		height: toRem(18);
+		flex: 0 0 toRem(30);
 		z-index: 5;
 		@media (any-hover: none) {
 			cursor: default;
