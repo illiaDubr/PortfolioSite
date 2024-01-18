@@ -11,6 +11,8 @@ z-index: 100;
         align-items: center;
         justify-content: space-between;
         gap: toRem(15);
+        padding-bottom: toRem(5);
+        padding-top: toRem(5);
         min-height: 123px;
         @media (max-width:$mobile){
              min-height: 60px; 

@@ -4,7 +4,43 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page"></main>
+      <main data-fp class="page">
+        <section data-fp-section class="page__main main-section">
+          <div class="main-section__container">
+            <div class="main-section__content">
+              <div class="main-section__title title">
+                <div class="title__label">MY NAME IS</div>
+                <h1 class="title__value title__value_big">
+                  Illia <span>Dubrovin</span>
+                </h1>
+              </div>
+              <div class="main-section__text text">
+                I'm a budding frontend developer with a passion for creating
+                engaging and user-friendly websites. Armed with a strong
+                foundation in HTML, CSS, and JavaScript, I'm excited to
+                contribute my skills to the ever-evolving world of web
+                development. Eager to collaborate, learn, and tackle new
+                challenges, I strive to craft seamless and visually appealing
+                digital experiences. Let's build the future of the web together!
+              </div>
+              <div class="main-section__social social">
+                <a href="" class="social__link _icon-s-instagram"></a>
+                <a href="" class="social__link _icon-s-git"></a>
+                <a href="" class="social__link _icon-s-lincedin"></a>
+              </div>
+            </div>
+            <div class="main-section__decor decor-main-section">
+              <div class="decor-main-section__image">
+                <img
+                  class="decor-main-section__picture"
+                  src="@img/main/picture.png"
+                  alt="picture"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
       @@include('html/_footer.htm',{})
     </div>
     @@include('html/_js.htm',{})
