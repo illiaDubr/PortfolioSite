@@ -3,6 +3,9 @@
     // .page__main
 
     &__main {}
+       
+    
+    &__services {}
 }
 
 .title {
@@ -11,7 +14,7 @@
 
     &__label {
         text-transform: uppercase;
-        font-size: toRem(12);
+        font-size: toRem(11);
         font-style: normal;
         font-weight: 500;
         line-height: 2;
@@ -82,3 +85,4 @@
         }
     }
 }
+
