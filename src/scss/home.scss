@@ -207,6 +207,7 @@ background-color: #FBFBFB;
             justify-content: center;
             padding-top: toRem(80);
             padding-bottom: toRem(30);
+           
     }
 
     // .portfolio__header
@@ -216,6 +217,7 @@ display: flex;
 gap: toRem(20);
 justify-content: space-between;
 align-items: center;
+@include adaptiveValue("margin-bottom", 144, 30);
     }
 
     // .portfolio__title
@@ -245,6 +247,12 @@ align-items: center;
                 background-color: #d6cefc;
             }
         }
+        &.swiper-button-disabled {
+            cursor: default;
+            opacity: 0.5;
+            color: #7E74F1;
+                background-color: #EAE6FE;
+        }
     }
    
 
@@ -272,26 +280,75 @@ align-items: center;
 }
 
 .item-portfolio {
-
+border-radius: toRem(8);
+border: 1px solid #F5F5F5;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+min-height: 100%;
     // .item-portfolio__image-ibg
 
-    &__image-ibg {}
+    &__image-ibg {
+        overflow: hidden;
+       // padding-bottom: percent(295,361);
+       max-height: toRem(295);
+        opacity: 0.5;
+        transition: all 0.5s;
+        img{
+            transition: all 0.5s;
+        }
+        @media (any-hover: hover){
+            &:hover{
+                opacity: 1;
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+                @media (any-hover: none) {
+                    opacity: 1;
+                }
+    }
 
     // .item-portfolio__body
 
-    &__body {}
+    &__body {
+        padding: toRem(24);
+        display: flex;
+            flex-direction: column;
+            gap: toRem(16);
+            flex: 1 1 auto;
+    }
 
     // .item-portfolio__title
 
-    &__title {}
+    &__title {
+        flex: 1 1 100%;
+    }
 
     // .item-portfolio__link-title
 
-    &__link-title {}
+    &__link-title {
+        color: #232e35;
+            font-weight: 500;
+            line-height: math.div(20, 16);
+            transition: color 0.3s ease 0s;
+        
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $purpleColor;
+                }
+            }
+    }
 
     // .item-portfolio__footer
 
-    &__footer {}
+    &__footer {
+        
+        display: flex;
+            align-items: center;
+            gap: toRem(16);
+    }
 
     // .item-portfolio__category
 
@@ -299,5 +356,14 @@ align-items: center;
 
     // .item-portfolio__link
 
-    &__link {}
+    &__link {
+            transition: color 0.3s ease 0s;
+                font-size: toRem(16);
+            
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: $purpleColor;
+                    }
+                }
+    }
 }
