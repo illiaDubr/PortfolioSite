@@ -218,6 +218,11 @@ gap: toRem(20);
 justify-content: space-between;
 align-items: center;
 @include adaptiveValue("margin-bottom", 144, 30);
+@media (max-width: em(600)){
+    align-items: center;
+    flex-direction: column;
+      
+}
     }
 
     // .portfolio__title
