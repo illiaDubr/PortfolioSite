@@ -88,7 +88,7 @@ function initSliders() {
 				640: {
 					slidesPerView: 2,
 					spaceBetween: 20,
-					autoHeight: true,
+					
 				},
 				768: {
 					slidesPerView: 2,
